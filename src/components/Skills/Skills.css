@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400;500;600;700&display=swap');
+
+/* General container styling */
+.skills {
+    padding: 2rem 0;
+    background-color: transparent; /* Make the background transparent */
+}
+
+.skillsHeader h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ffffff; /* White text color */
+}
+
+.skillsContainer {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+}
+
+.skill--scroll {
+    width: 100%;
+    display: flex;
+}
+
+/* Circular box styling */
+.skill--box {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05), 0px 0px 10px 3px rgba(255, 192, 0, 0.3); /* Softer yellow glow with reduced opacity */
+    border-radius: 50%; /* Circular shape */
+    width: 140px; /* Diameter of the circle */
+    height: 140px; /* Diameter of the circle */
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the content */
+    padding: 10px;
+    position: relative; /* For child positioning */
+    overflow: hidden; /* Prevent overflow outside the circle */
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+.skill--box:hover {
+    transform: scale(1.2); /* Slightly increase size on hover */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1), 0px 0px 20px 6px rgba(255, 192, 0, 0.4); /* Softer, stronger glow on hover */
+}
+
+/* Styling for the image inside the circular box */
+.skill--box > img {
+    height: 70px;
+    pointer-events: none;
+}
+
+/* Styling for the text inside the circular box */
+.skill--box h3 {
+    font-family: 'Big Shoulders Text', sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff; /* White text for skills */
+}
