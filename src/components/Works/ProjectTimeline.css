@@ -1,0 +1,131 @@
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #262626; /* Dark Gray Background */
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffc000;
+  animation: slideInLeft 1s ease-out;
+}
+
+.vertical-timeline {
+  padding: 20px 0;
+}
+
+/* Floating effect for all VerticalTimelineElement */
+.vertical-timeline-element {
+  transform: translateY(10px); /* Initial position, floating effect */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.vertical-timeline-element:hover {
+  transform: translateY(0); /* Stop floating when hovered */
+}
+
+.vertical-timeline-element-content {
+  position: relative;
+  animation: slideInLeft 0.8s ease-out;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-5px); /* Floating effect for the content */
+  border-radius: 12px;
+}
+
+/* Hover effect for the content */
+.vertical-timeline-element:hover .vertical-timeline-element-content {
+  transform: translateY(0); /* Stop floating when hovered */
+}
+
+.vertical-timeline-element-icon {
+  background: #262626;
+  color: #ffffff;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for the icon */
+.vertical-timeline-element:hover .vertical-timeline-element-icon {
+  transform: rotate(360deg); /* Smooth rotation effect */
+  background-color: #ffc000 !important; /* Yellow highlight */
+  animation: pulseEffect 1s infinite; /* Pulsating effect */
+}
+
+/* Removed text color change on hover */
+.vertical-timeline-element-date,
+.vertical-timeline-element-title,
+.vertical-timeline-element-subtitle {
+  font-weight: bold;
+}
+
+.vertical-timeline-element-title {
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.vertical-timeline-element-subtitle {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.vertical-timeline-element-date {
+  color: #ffffff;
+  margin-left: 0;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.vertical-timeline::before {
+  background: white !important; /* Change the timeline line color to white */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .vertical-timeline-element-date {
+    font-size: 1rem; /* Adjust date font size for mobile */
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .vertical-timeline-element-content {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .vertical-timeline-element-icon {
+    width: 40px; /* Smaller icon for mobile */
+    height: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .vertical-timeline-element-date {
+    text-align: left;
+  }
+}

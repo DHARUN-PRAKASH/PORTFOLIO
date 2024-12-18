@@ -1,14 +1,16 @@
-// import Home from "./components/Home/home";
+import React from "react";
+import ProjectsTimeline from "./components/Works/ProjectsTimeline";
+import './bg.css'
+import Skill from "./components/Skills/Skills"
 
-import Skills from "./components/Skills/Skills";
-import './bg.css'; // Path to your CSS file
 
-
-
-function App() {
+const App = () => {
   return (
-    <Skills/>
+    <div>
+      <ProjectsTimeline/>
+      <Skill/>
+    </div>
   );
-}
+};
 
 export default App;
