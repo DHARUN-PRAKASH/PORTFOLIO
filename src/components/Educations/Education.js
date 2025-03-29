@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProjectTimeline.css";
+import "./Education.css";
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -11,7 +11,7 @@ import image1 from "../../assets/images/SSLC.jpeg";
 import image2 from "../../assets/images/HSC.jpeg";
 import image3 from "../../assets/images/MEC.jpg";
 
-export default function App() {
+export default function Education() {
   return (
     <div className="App">
       <h1 style={{ color: "#ffc000" }}>Education</h1>

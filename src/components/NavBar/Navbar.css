@@ -1,0 +1,131 @@
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(38, 38, 38, 0.9); /* Blurry background */
+  backdrop-filter: blur(15px); /* Blur effect */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Name section */
+.name {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: #ffc000; /* Initial color */
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+/* Individual letter animation */
+.letter {
+  font-size: 24px;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  display: inline-block;
+}
+
+/* RubberBand Animation */
+.rubberBand {
+  animation: rubberBand 1s;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* Space between letters */
+.space {
+  display: inline-block;
+  width: 8px; /* Adjust width for spacing */
+}
+
+/* Desktop links */
+.links a {
+  font-size: 24px;
+  color: #ffc000; /* Yellow color for icons */
+  margin-right: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.links a:hover {
+  color: #ff0000;
+}
+
+/* Drawer Styles */
+.drawer-links {
+  width: 250px;
+  padding: 1rem;
+  background: rgba(38, 38, 38, 0.9);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.drawer-links a {
+  font-size: 20px;
+  color: #ffc000; /* Yellow color for icons and text */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.drawer-links a:hover {
+  color: #ff0000;
+}
+
+/* Menu Icon for Mobile */
+.menu-icon {
+  color: #ff0000; /* Default red */
+  transition: color 0.3s ease; /* Smooth color change */
+}
+
+.menu-icon:hover {
+  color: #ffc000; /* Yellow on hover */
+}
+
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

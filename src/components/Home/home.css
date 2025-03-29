@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.home-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.text-content h1 {
+  font-size: 48px; /* Increased text size */
+  margin: 0;
+  line-height: 1.2;
+}
+
+.text-content h1 .highlight {
+  color: #ffc000;
+}
+
+.text-content p {
+  margin: 20px 0;
+  color: #8d8d8d;
+}
+
+.contact-button {
+  border: 1px solid #ffc000;
+  color: #ffc000;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #ffc000;
+  color: #0d1117;
+}
+
+.floating-logo {
+  text-align: center;
+}
+
+.logo-3d {
+  font-size: 500px; /* Increased logo size */
+  font-weight: bold;
+  color: #ffc000;
+  text-shadow: -10px 3px 0 #ff0000;
+  transform: rotateY(15deg);
+}
+
+/* Rubber Band Effect on Each Letter */
+.rubber-letter {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.rubber-letter:hover {
+  animation: rubberBand 1s;
+}
+
+@keyframes rubberBand {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content h1 {
+    font-size: 36px; /* Slightly increased font size for mobile */
+  }
+
+  .text-content p {
+    font-size: 18px;
+  }
+
+  .logo-3d {
+    font-size: 130px; /* Adjusted for mobile */
+  }
+
+  .rubber-letter {
+    font-size: 30px; /* Increased letter size for mobile */
+  }
+}

@@ -9,10 +9,7 @@ import { skillsImage } from './skillsImage';
 function Skills() {
 
     // Define static theme styles
-    const skillBoxStyle = {
-        backgroundColor: '#f0f0f0', // Light gray background
-        boxShadow: '0px 0px 30px rgba(0, 0, 0, 0.1)', // Shadow for effect
-    };
+
 
     const headerStyle = {
         color: '#ffffff', // White text color
